@@ -7,6 +7,15 @@ class shopProduct
     public $price;
     public $title;
 
+    function __construct($name, $surname, $price, $title)
+    {
+        $this->name = $name;
+        $this->surname = $surname;
+        $this->price = $price;
+        $this->title = $title;
+
+    }
+
     public function set_name($name)
     {
         $this->name = $name;
@@ -20,7 +29,7 @@ class shopProduct
 
 
 
-$product1 = new shopProduct();
+$product1 = new shopProduct("novoIme", "novoPrezime", "novaCena", "noviTitl");
 $product1->name = "Product1";
 $product1->surname = "PrSurname";
 $product1->price = 100;

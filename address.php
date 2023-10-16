@@ -34,12 +34,12 @@ $manager->outputAddress($resolve);
 
 
 class Storage {
-    public function addd(string $key, $value)
+    public function add(string $key, $value)
     {
 
     }
 
-    public function add1(string $value, mixed $values2)
+    public function add2(string $value, mixed $values2)
     {
 
     }

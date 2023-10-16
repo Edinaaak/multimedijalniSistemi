@@ -44,12 +44,14 @@ class Storage {
 
     }
 
+    //postoji i mixed tip... saznati zbog cega se koristiii
     public function  add3(string $value, bool|string $values)
     {
 
 
     }
 
+    //nullable tipovi sa prefiksom ?
     public function add4(string $key, ?string $value4)
     {
 
@@ -70,7 +72,7 @@ class Storage {
     {
         $this->discount = $num;
     }
-    //nullable tipovi sa prefiksom ?
+    
 }
 
 ?>

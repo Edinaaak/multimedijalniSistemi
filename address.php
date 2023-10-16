@@ -17,7 +17,8 @@ class AddressManager
 
 // XML postavke za resolvedomains
 $xml = simplexml_load_string('<settings><resolvedomains>false</resolvedomains></settings>');
-$resolve = (string) $xml->resolvedomains;
+$resolve = $xml->resolvedomains == 'true';
+
 
 $manager = new AddressManager();
 $manager->outputAddress($resolve);

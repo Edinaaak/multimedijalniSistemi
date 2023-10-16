@@ -35,7 +35,7 @@ class shopPrinter
         echo "Name: " .$shopProduct->name . " Surname: " .$shopProduct->surname . " Price: " .$shopProduct->price ." Title: " .$shopProduct->title;
     }
 }
-
+//UML KAKO SE KREIRA, MOZE L PREKO GITA
 class CDProduct extends shopProduct {
 
      public int $duzinaTrajanja;

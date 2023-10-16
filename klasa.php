@@ -36,7 +36,13 @@ class shopPrinter
     }
 }
 
+class CDProduct {
 
+}
+
+class BookProdcut {
+    
+}
 
 $product1 = new shopProduct("novoIme", "novoPrezime", 100, "noviTitl");
 // u phpu 8 imamo definisane tipove, i kad npr cena je float, a mi stavimo "", to ce interpretirati kao float automatski

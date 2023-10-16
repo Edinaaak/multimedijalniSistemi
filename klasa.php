@@ -2,12 +2,12 @@
 
 class shopProduct 
 {
-    public $name;
-    public $surname;
-    public $price;
-    public $title;
+    public string $name;
+    public string $surname;
+    public float $price;
+    public string $title;
 
-    function __construct($name, $surname, $price, $title)
+    function __construct(string $name, string $surname, float $price, string $title)
     {
         $this->name = $name;
         $this->surname = $surname;
@@ -36,12 +36,21 @@ class shopPrinter
     }
 }
 
-class CDProduct {
+class CDProduct extends shopProduct {
 
+     public int $duzinaTrajanja;
+     function __construct(int $duzinaTrajanja)
+     {
+        $this->$duzinaTrajanja = $duzinaTrajanja;
+     }
 }
 
-class BookProdcut {
-    
+class BookProdcut  extends shopProduct {
+    public $brojStrana;
+    function __construct(int $brojStrana) 
+    {
+        $this->brojStrana = $brojStrana;
+    }
 }
 
 $product1 = new shopProduct("novoIme", "novoPrezime", 100, "noviTitl");

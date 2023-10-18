@@ -39,9 +39,10 @@ class shopPrinter
 class CDProduct extends shopProduct {
 
      public int $duzinaTrajanja;
-     function __construct(int $duzinaTrajanja)
+     function __construct(string $name, string $surname, float $price, string $title, int $duzinaTrajanja) 
      {
-        $this->$duzinaTrajanja = $duzinaTrajanja;
+         parent::__construct($name, $surname, $price, $title);
+         $this->duzinaTrajanja = $duzinaTrajanja;
      }
 
      public function playLength():int 
@@ -55,10 +56,12 @@ class CDProduct extends shopProduct {
      }
 }
 
+//treba da ima isti konstruktor, i na kraju dodat je atribut brojStrana
 class BookProdcut  extends shopProduct {
     public $brojStrana;
-    function __construct(int $brojStrana) 
+    function __construct(string $name, string $surname, float $price, string $title, int $brojStrana) 
     {
+        parent::__construct($name, $surname, $price, $title);
         $this->brojStrana = $brojStrana;
     }
 
@@ -69,7 +72,9 @@ class BookProdcut  extends shopProduct {
 
     public function print()
     {
-        echo "Page number: ".$this->brojStrana;
+        echo "<br><strong>Book product printer: </strong>";
+        echo "<br>Name: " .$this->name . " Surname: " .$this->surname . " Price: " .$this->price ." Title: " .$this->title;
+        echo "<br>Page number: ".$this->brojStrana;
     }
 }
 
@@ -79,9 +84,7 @@ $product1 = new shopProduct("novoIme", "novoPrezime", 100, "noviTitl");
 $book2 = new shopProduct("Edis", "Mekic", 100, "Book one");
 $shopPrint = new shopPrinter();
 $shopPrint->print($product1);
-$cd_product = new CDProduct(10);
-$cd_product->print();
-$book_product = new BookProdcut(55);
+$book_product = new BookProdcut("Edis", "Mekic", 100, "Book one", 55);
 $book_product->print();
 
 ?>

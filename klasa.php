@@ -48,6 +48,11 @@ class CDProduct extends shopProduct {
      {
         return $this->duzinaTrajanja;
      }
+
+     public function print()
+     {
+        echo "".$this->duzinaTrajanja."";
+     }
 }
 
 class BookProdcut  extends shopProduct {
@@ -60,6 +65,11 @@ class BookProdcut  extends shopProduct {
     public function pageNumber() : int
     {
         return $this->brojStrana;
+    }
+
+    public function print()
+    {
+        echo "".$this->brojStrana."";
     }
 }
 

@@ -43,6 +43,11 @@ class CDProduct extends shopProduct {
      {
         $this->$duzinaTrajanja = $duzinaTrajanja;
      }
+
+     public function playLength():int 
+     {
+        $this->duzinaTrajanja;
+     }
 }
 
 class BookProdcut  extends shopProduct {
@@ -50,6 +55,11 @@ class BookProdcut  extends shopProduct {
     function __construct(int $brojStrana) 
     {
         $this->brojStrana = $brojStrana;
+    }
+
+    public function numberPages() : int
+    {
+        return $this->brojStrana;
     }
 }
 

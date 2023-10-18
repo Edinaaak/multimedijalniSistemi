@@ -51,7 +51,7 @@ class CDProduct extends shopProduct {
 
      public function print()
      {
-        echo "".$this->duzinaTrajanja."";
+        echo "Play length: ".$this->duzinaTrajanja;
      }
 }
 
@@ -69,7 +69,7 @@ class BookProdcut  extends shopProduct {
 
     public function print()
     {
-        echo "".$this->brojStrana."";
+        echo "Page number: ".$this->brojStrana;
     }
 }
 
@@ -79,7 +79,10 @@ $product1 = new shopProduct("novoIme", "novoPrezime", 100, "noviTitl");
 $book2 = new shopProduct("Edis", "Mekic", 100, "Book one");
 $shopPrint = new shopPrinter();
 $shopPrint->print($product1);
-
+$cd_product = new CDProduct(10);
+$cd_product->print();
+$book_product = new BookProdcut(55);
+$book_product->print();
 
 ?>
 

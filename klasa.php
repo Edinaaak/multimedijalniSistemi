@@ -57,7 +57,7 @@ class BookProdcut  extends shopProduct {
         $this->brojStrana = $brojStrana;
     }
 
-    public function numberPages() : int
+    public function pageNumber() : int
     {
         return $this->brojStrana;
     }

@@ -46,7 +46,7 @@ class CDProduct extends shopProduct {
 
      public function playLength():int 
      {
-        $this->duzinaTrajanja;
+        return $this->duzinaTrajanja;
      }
 }
 

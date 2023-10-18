@@ -52,7 +52,9 @@ class CDProduct extends shopProduct {
 
      public function print()
      {
-        echo "Play length: ".$this->duzinaTrajanja;
+        echo "<br><strong>CD product printer: </strong>";
+        echo "<br>Name: " .$this->name . " Surname: " .$this->surname . " Price: " .$this->price ." Title: " .$this->title;
+        echo "<br>Play length: ".$this->duzinaTrajanja;
      }
 }
 
@@ -86,6 +88,8 @@ $shopPrint = new shopPrinter();
 $shopPrint->print($product1);
 $book_product = new BookProdcut("Edis", "Mekic", 100, "Book one", 55);
 $book_product->print();
+$cd_product = new CDProduct("Edis", "Mekic", 100, "Book one", 100);
+$cd_product->print();
 
 ?>
 

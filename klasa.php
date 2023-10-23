@@ -29,11 +29,19 @@ class shopProduct
 
 class shopPrinter
 {
+    private $shopProduct;
 
     function print(shopProduct $shopProduct)
     {
         echo "Name: " .$shopProduct->name . " Surname: " .$shopProduct->surname . " Price: " .$shopProduct->price ." Title: " .$shopProduct->title;
     }
+
+    function printName()
+    {
+        echo "Name " + $this->shopProduct->name . "";
+    }
+
+   
 }
 //UML KAKO SE KREIRA, MOZE L PREKO GITA
 class CDProduct extends shopProduct {

@@ -69,6 +69,11 @@ class shopPrinter
     {
         echo "Length: " .$this->shopProduct?->duzinaTrajanja;
     }
+
+    function printNumPages()
+    {
+        echo "Num Pages: " .$this->shopProduct?->numPages;
+    }
    
 }
 //UML KAKO SE KREIRA, MOZE L PREKO GITA

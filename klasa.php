@@ -60,6 +60,10 @@ class shopPrinter
         $this->shopProduct->discount = $discount;
     }
 
+    function printNameSurname()
+    {
+        echo "<br>" .$this->shopProduct->name . " " .$this->shopProduct->surname;
+    }
    
 }
 //UML KAKO SE KREIRA, MOZE L PREKO GITA
@@ -115,7 +119,7 @@ $shopPrint = new shopPrinter();
 $shopPrint->print($product1);
 $book_product = new BookProdcut("Edis", "Mekic", 100, "Book one", 55);
 $book_product->print();
-$cd_product = new CDProduct("Edis", "Mekic", 100, "Book one", 100);
+$cd_product = new CDProduct("Edis", "Mekic", 100, "Cd one", 100);
 $cd_product->print();
 
 ?>

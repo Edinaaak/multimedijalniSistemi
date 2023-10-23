@@ -39,7 +39,13 @@ class shopPrinter
     function printName()
     {
         echo "Name " + $this->shopProduct->name . "";
+    } 
+    function printSurname()
+    {
+        echo "Name " + $this->shopProduct->surname . "";
     }
+
+   
 
    
 }

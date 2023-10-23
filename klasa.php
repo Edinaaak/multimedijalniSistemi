@@ -138,5 +138,8 @@ $cd_product->print();
 $shopPrint = new shopPrinter($product1);
 $shopPrint->print();
 $shopPrint->printName();
+$shopPrint2 = new shopPrinter($cd_product);
+$shopPrint2->print();
+$shopPrint2->printName();
 ?>
 

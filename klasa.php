@@ -55,7 +55,10 @@ class shopPrinter
         echo "Title " + $this->shopProduct->title;
     }
 
-   
+    function setDiscount(int|float $discount)
+    {
+        $this->shopProduct->discount = $discount;
+    }
 
    
 }

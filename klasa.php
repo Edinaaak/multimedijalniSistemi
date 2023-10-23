@@ -141,5 +141,6 @@ $shopPrint->printName();
 $shopPrint2 = new shopPrinter($cd_product);
 $shopPrint2->print();
 $shopPrint2->printName();
+$shopPrint2->printPlayLength();
 ?>
 

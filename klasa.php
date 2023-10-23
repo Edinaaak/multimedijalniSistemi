@@ -64,6 +64,11 @@ class shopPrinter
     {
         echo "<br>" .$this->shopProduct->name . " " .$this->shopProduct->surname;
     }
+
+    function printPlayLength()
+    {
+        echo "Length: " .$this->shopProduct?->duzinaTrajanja;
+    }
    
 }
 //UML KAKO SE KREIRA, MOZE L PREKO GITA

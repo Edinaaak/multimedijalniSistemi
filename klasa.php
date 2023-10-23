@@ -30,29 +30,35 @@ class shopProduct
 class shopPrinter
 {
     private $shopProduct;
-
-    function print(shopProduct $shopProduct)
+    function __construct($shopProduct)
     {
-        echo "Name: " .$shopProduct->name . " Surname: " .$shopProduct->surname . " Price: " .$shopProduct->price ." Title: " .$shopProduct->title;
+        $this->shopProduct = $shopProduct;
+
+    }
+    
+
+    function print()
+    {
+        echo "Name: " .$this->shopProduct->name . " Surname: " .$this->shopProduct->surname . " Price: " .$this->shopProduct->price ." Title: " .$this->shopProduct->title;
     }
 
     function printName()
     {
-        echo "Name " + $this->shopProduct->name . "";
+        echo "<br> Name " .$this->shopProduct->name . "";
     } 
     function printSurname()
     {
-        echo "Name " + $this->shopProduct->surname . "";
+        echo "<br> Surname " . $this->shopProduct->surname . "";
     }
 
     function printPrice()
     {
-        echo "Price " + $this->shopProduct->price;
+        echo "<br>Price " . $this->shopProduct->price;
     }
 
     function printTitle()
     {
-        echo "Title " + $this->shopProduct->title;
+        echo "<br> Title " . $this->shopProduct->title;
     }
 
     function setDiscount(int|float $discount)
@@ -67,7 +73,7 @@ class shopPrinter
 
     function printPlayLength()
     {
-        echo "Length: " .$this->shopProduct?->duzinaTrajanja;
+        echo "<br> Length: " .$this->shopProduct?->duzinaTrajanja;
     }
 
     function printNumPages()
@@ -125,12 +131,12 @@ $product1 = new shopProduct("novoIme", "novoPrezime", 100, "noviTitl");
 // u phpu 8 imamo definisane tipove, i kad npr cena je float, a mi stavimo "", to ce interpretirati kao float automatski
 
 $book2 = new shopProduct("Edis", "Mekic", 100, "Book one");
-$shopPrint = new shopPrinter();
-$shopPrint->print($product1);
 $book_product = new BookProdcut("Edis", "Mekic", 100, "Book one", 55);
 $book_product->print();
 $cd_product = new CDProduct("Edis", "Mekic", 100, "Cd one", 100);
 $cd_product->print();
-
+$shopPrint = new shopPrinter($product1);
+$shopPrint->print();
+$shopPrint->printName();
 ?>
 
